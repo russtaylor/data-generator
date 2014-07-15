@@ -1,0 +1,12 @@
+{
+  "serial": {"pattern": "\\d-\\d{3}-\\d{4}-\\d{2}"},
+  "title": {
+    "elements": [
+      {"name": "title-word-1", "type": "markov", "count": 1},
+      {"name": "title-word-2", "type": "markov", "count": 1},
+      {"name": "title-text", "type": "markov", "count": {"lowerBound": 10, "upperBound": 40}},
+    ],
+    "dependsOn": "serial",
+    "format": "{serial}/{title-word-1}/{title-word-2} - {title-text}"
+  }
+}
